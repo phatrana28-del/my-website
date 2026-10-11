@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="th" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC ZONE - แจกสคริปต์และซอฟต์แวร์ฟรี</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Prompt -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            cyan: '#00f2fe',
+                            blue: '#4facfe',
+                            dark: '#0b0f19',
+                            card: '#111827',
+                            border: '#1f2937'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+        }
+        .neon-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.45);
+        }
+        .bg-gradient-text {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 text-2xl font-bold tracking-wider">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-500 flex items-center justify-center text-black font-extrabold text-xl shadow-lg shadow-cyan-500/30">
+                    <i class="fa-solid fa-terminal"></i>
+                </div>
+                <span>PC <span class="bg-gradient-text">ZONE</span></span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center relative w-96">
+                <input type="text" id="searchInput" onkeyup="searchScripts()" placeholder="ค้นหาสคริปต์ที่ต้องการ..." 
+                       class="w-full bg-brand-card border border-brand-border rounded-xl px-4 py-2 pl-10 text-sm focus:outline-none focus:border-cyan-400 transition">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 text-gray-400 text-sm"></i>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="#scripts" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-semibold text-sm hover:opacity-90 transition neon-glow">
+                    <i class="fa-solid fa-code mr-1.5"></i> ดูสคริปต์ทั้งหมด
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative py-20 overflow-hidden border-b border-brand-border/50">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-brand-dark to-brand-dark"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 inline-block mb-4">
+                <i class="fa-solid fa-bolt mr-1"></i> รวมสคริปต์แจกฟรี คุณภาพสูง
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+                ศูนย์รวมสคริปต์และโค้ด <br class="hidden sm:inline" />
+                <span class="bg-gradient-text">สำหรับคนรัก PC & Gaming</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg mb-8">
+                ดาวน์โหลดสคริปต์ระบบ, เครื่องมือช่วยจัดการ PC, บอท และปลั๊กอินต่างๆ ฟรี! อัปเดตใหม่ตลอด พร้อมใช้งานทันที
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#scripts" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold hover:opacity-90 transition neon-glow">
+                    เริ่มดาวน์โหลดเลย
+                </a>
+                <a href="https://discord.gg" target="_blank" class="px-8 py-3.5 rounded-xl bg-brand-card border border-brand-border text-white font-medium hover:bg-gray-800 transition flex items-center gap-2">
+                    <i class="fa-brands fa-discord text-indigo-400 text-lg"></i> เข้าดิสคอร์ดพูดคุย
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content / Script List -->
+    <main id="scripts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+            <div>
+                <h2 class="text-2xl font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-fire text-cyan-400"></i> สคริปต์ยอดนิยม
+                </h2>
+                <p class="text-gray-400 text-sm mt-1">เลือกดาวน์โหลดสคริปต์ที่คุณต้องการได้ทันที</p>
+            </div>
+            
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="filter-buttons">
+                <button onclick="filterCategory('all')" class="category-btn active px-4 py-1.5 rounded-lg text-sm font-medium bg-cyan-500 text-black transition">ทั้งหมด</button>
+                <button onclick="filterCategory('optimization')" class="category-btn px-4 py-1.5 rounded-lg text-sm font-medium bg-brand-card border border-brand-border hover:border-cyan-500/50 transition">PC Optimization</button>
+                <button onclick="filterCategory('gaming')" class="category-btn px-4 py-1.5 rounded-lg text-sm font-medium bg-brand-card border border-brand-border hover:border-cyan-500/50 transition">Gaming Tool</button>
+                <button onclick="filterCategory('bot')" class="category-btn px-4 py-1.5 rounded-lg text-sm font-medium bg-brand-card border border-brand-border hover:border-cyan-500/50 transition">Discord Bot</button>
+            </div>
+        </div>
+
+        <!-- Script Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="scriptGrid">
+            
+            <!-- Card 1 -->
+            <div class="script-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition group" data-category="optimization" data-title="Windows Optimizer Pro">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">PC Optimization</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-download mr-1"></i> 1.2k</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Windows Optimizer Pro</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">สคริปต์ช่วยลบไฟล์ขยะ เพิ่มความเร็ว Windows ปิด Service ที่ไม่จำเป็นสำหรับสายเล่นเกม</p>
+                </div>
+                <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-gray-500">v2.1 • ฟรี</span>
+                    <button onclick="copyCode('powershell -Command &quot;Invoke-RestMethod https://pczone.th/opt.ps1 | Invoke-Expression&quot;', 'Windows Optimizer')" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold text-sm transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i> คัดลอกสคริปต์
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="script-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition group" data-category="gaming" data-title="FPS Booster Ultimate">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">Gaming Tool</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-download mr-1"></i> 3.5k</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">FPS Booster Ultimate</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">ปรับแต่งตั้งค่า GPU/CPU สำหรับเกม FPS ช่วยลด Input Lag และเพิ่ม เฟรมเรทเน้นๆ</p>
+                </div>
+                <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-gray-500">v1.0 • ฟรี</span>
+                    <button onclick="copyCode('powershell -Command &quot;Invoke-RestMethod https://pczone.th/fps.ps1 | Invoke-Expression&quot;', 'FPS Booster')" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold text-sm transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i> คัดลอกสคริปต์
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="script-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition group" data-category="bot" data-title="Discord Music Bot Python">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Discord Bot</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-download mr-1"></i> 850</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Discord Music Bot V14</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">สคริปต์ดิสคอร์ดบอทเพลง รองรับ YouTube, Spotify ติดตั้งง่ายเพียงใสโทเคน</p>
+                </div>
+                <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Node.js • ฟรี</span>
+                    <button onclick="copyCode('git clone https://github.com/example/discord-music-bot.git', 'Discord Music Bot')" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold text-sm transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i> คัดลอกสคริปต์
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="script-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition group" data-category="optimization" data-title="Network Latency Fixer">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">PC Optimization</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-download mr-1"></i> 2.1k</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Network Latency Fixer</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">สคริปต์ปรับแต่ง Registry เครือข่าย ลดค่า Ping แก้ไขอาการปิงแกว่งในเกมออนไลน์</p>
+                </div>
+                <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-gray-500">v1.4 • ฟรี</span>
+                    <button onclick="copyCode('powershell -Command &quot;Invoke-RestMethod https://pczone.th/ping.ps1 | Invoke-Expression&quot;', 'Network Fixer')" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold text-sm transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i> คัดลอกสคริปต์
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="script-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition group" data-category="gaming" data-title="Crosshair Overlay Tool">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">Gaming Tool</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-download mr-1"></i> 940</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Custom Crosshair Tool</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">สคริปต์สร้างเป้าเล็ง Custom บนหน้าจอ ปรับแต่งสีและขนาดได้อิสระ สำหรับเกม FPS</p>
+                </div>
+                <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-gray-500">AHK • ฟรี</span>
+                    <button onclick="copyCode('https://pczone.th/downloads/crosshair.exe', 'Custom Crosshair')" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold text-sm transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i> คัดลอกลิงก์
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="script-card bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition group" data-category="bot" data-title="Discord Welcome Bot">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-md text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Discord Bot</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-download mr-1"></i> 620</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition">Discord Welcome & Auto-Role</h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">บอทต้อนรับสมาชิกใหม่ ส่งรูป Welcome และแจกยศให้อัตโนมัติ ปรับแต่งผ่านไฟล์ Config</p>
+                </div>
+                <div class="pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Python • ฟรี</span>
+                    <button onclick="copyCode('git clone https://github.com/example/discord-welcome-bot.git', 'Discord Welcome Bot')" class="px-4 py-2 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold text-sm transition flex items-center gap-1.5">
+                        <i class="fa-regular fa-copy"></i> คัดลอกสคริปต์
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-cyan-500 text-black px-5 py-3 rounded-xl shadow-2xl font-bold flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <span id="toastMessage">คัดลอกสคริปต์เรียบร้อยแล้ว!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-card border-t border-brand-border py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-white">PC ZONE</span> &copy; 2026 แจกฟรีเพื่อสังคมสายคอม
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-cyan-400 transition"><i class="fa-brands fa-discord text-lg"></i></a>
+                <a href="#" class="hover:text-cyan-400 transition"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-cyan-400 transition"><i class="fa-brands fa-youtube text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Copy Code Function
+        function copyCode(codeText, scriptName) {
+            navigator.clipboard.writeText(codeText).then(() => {
+                showToast(`คัดลอก ${scriptName} เรียบร้อยแล้ว!`);
+            });
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.innerText = message;
+            
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        // Category Filter
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.script-card');
+            const buttons = document.querySelectorAll('.category-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-cyan-500', 'text-black');
+                btn.classList.add('bg-brand-card', 'text-gray-300');
+            });
+
+            event.target.classList.remove('bg-brand-card', 'text-gray-300');
+            event.target.classList.add('bg-cyan-500', 'text-black');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Search Scripts
+        function searchScripts() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.script-card');
+
+            cards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
